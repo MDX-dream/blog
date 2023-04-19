@@ -1,0 +1,34 @@
+
+#公共配置和表名当前配置文件
+#thymeleaf模板、当前配置活跃文件
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: pro
+
+  #IMAP/SMTP  PUNBPKRBXRCNSZGZ
+  mail:
+    host: smtp.163.com
+    username: MDX_dream@163.com
+    password: PUNBPKRBXRCNSZGZ
+#    port: 465
+    protocol: smtp
+    test-connection: true
+    default-encoding: utf-8
+  boot:
+    admin:
+      notify:
+        mail:
+          from: MDX_dream@163.com
+
+
+#数据持久层
+mybatis:
+  type-aliases-package: com.master.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+comment.avatar: /images/avatar.png
+message.avatar: /images/avatar.png

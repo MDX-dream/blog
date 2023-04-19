@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.master.dao.FriendLinkDao">
+
+    <!--查询所有朋友-->
+    <select id="listFriendLink" resultType="com.master.entity.FriendLink">
+        select *
+        from blog.friend
+        order by friend.create_time
+    </select>
+
+    <!--添加朋友-->
+    <insert id="saveFriendLink" parameterType="com.master.entity.FriendLink">
+        insert into blog.friend (blogname, blogaddress, pictureaddress, create_time)
+        values (#{blogname}, #{blogaddress}, #{pictureaddress}, #{createTime})
+    </insert>
+
+    <!--根据网址查询朋友-->
+    <select id="getFriendLinkByBlogaddress" resultType="com.master.entity.FriendLink">
+        select *
+        from blog.friend f
+        where f.blogaddress = #{blogaddress}
+    </select>
+
+    <!--根据id查询朋友-->
+    <select id="getFriendLink" resultType="com.master.entity.FriendLink">
+        select *
+        from blog.friend f
+        where f.id = #{id}
+    </select>
+
+    <!--编辑修改朋友-->
+    <update id="updateFriendLink" parameterType="com.master.entity.FriendLink">
+        update blog.friend
+        set blogname       = #{blogname},
+            blogaddress    = #{blogaddress},
+            pictureaddress = #{pictureaddress}
+        where id = #{id};
+    </update>
+
+    <!--删除朋友-->
+    <delete id="deleteFriendLink">
+        delete
+        from blog.friend
+        where id = #{id}
+    </delete>
+
+</mapper>

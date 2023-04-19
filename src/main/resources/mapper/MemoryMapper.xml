@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.master.dao.MemoryDao">
+
+    <!--查询所有记忆-->
+    <select id="listMemory" resultType="com.master.entity.Memory">
+        select *
+        from blog.memory
+        order by memory.id desc
+    </select>
+
+    <!--添加记忆-->
+    <insert id="saveMemory" parameterType="com.master.entity.Memory">
+        insert into blog.memory (picture_address, create_time, memory)
+        values (#{pictureAddress}, #{createTime}, #{memory})
+    </insert>
+
+    <!--根据id查询照片-->
+    <select id="getMemory" resultType="com.master.entity.Memory">
+        select *
+        from blog.memory p
+        where p.id = #{id}
+    </select>
+
+    <!--编辑修改相册-->
+    <update id="updateMemory" parameterType="com.master.entity.Memory">
+        update blog.memory
+        set picture_address = #{pictureAddress},
+            memory          = #{memory}
+        where id = #{id};
+    </update>
+
+    <!--删除照片-->
+    <delete id="deleteMemory">
+        delete
+        from blog.memory
+        where id = #{id}
+    </delete>
+
+</mapper>

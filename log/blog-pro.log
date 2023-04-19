@@ -1,0 +1,4 @@
+2023-04-10 15:19:30.606  INFO 29484 --- [restartedMain] com.master.BlogApplication               : Starting BlogApplication on lusted with PID 29484 (D:\Software-cache\IdeaProjects\blog\target\classes started by 冬旭 in D:\Software-cache\IdeaProjects\blog)
+2023-04-10 15:19:30.610  INFO 29484 --- [restartedMain] com.master.BlogApplication               : The following profiles are active: pro
+2023-04-10 15:19:32.372  WARN 29484 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.master]' package. Please check your configuration.
+2023-04-10 15:19:36.713  INFO 29484 --- [restartedMain] com.master.BlogApplication               : Started BlogApplication in 7.085 seconds (JVM running for 9.449)
