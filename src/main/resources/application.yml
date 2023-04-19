@@ -7,20 +7,20 @@ spring:
   profiles:
     active: pro
 
-  #IMAP/SMTP  PUNBPKRBXRCNSZGZ
-  mail:
-    host: smtp.163.com
-    username: MDX_dream@163.com
-    password: PUNBPKRBXRCNSZGZ
-#    port: 465
-    protocol: smtp
-    test-connection: true
-    default-encoding: utf-8
-  boot:
-    admin:
-      notify:
-        mail:
-          from: MDX_dream@163.com
+#
+#   mail:
+#     host: 
+#     username: 
+#     password: 
+# #    port: 
+#     protocol: 
+#     test-connection: true
+#     default-encoding: utf-8
+#   boot:
+#     admin:
+#       notify:
+#         mail:
+#           from: 
 
 
 #数据持久层
