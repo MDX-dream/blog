@@ -1,6 +1,6 @@
 #部署环境
 server:
-  port: 8099
+  port: 80
 
 #数据库
 spring:
